@@ -20,8 +20,9 @@ var express = require("express"),
 
 
 
-mongoose.connect("mongodb+srv://shashank:shashank@cluster0-vpgxb.mongodb.net/test?retryWrites=true&w=majority", { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
 
+    mongoose.connect(DATABASEURL, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false});
+    
 // SeedDB();
 app.use(bodyParser.urlencoded({ extended: true }));
 app.use(express.static(__dirname + "/public"));
